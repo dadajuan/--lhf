@@ -1,0 +1,8 @@
+#创建一个新数据中，然后不断更新里面的元素
+new_432 = np.zeros((432, 32, 32, 3), dtype = np.float32)
+for i, imgi in emuerate(vlalid_lr_imgs):
+    valid_lr_img = (imgi/127.5) - 1
+    valid_lr_img = np.asarray(valid_lr_img, dtype=np.float32)
+
+    valid_lr_img = valid_lr_img[np.newaxis, :, :, :]  # (1,32,32,3)
+    valid_lr_imgs_432[i, :, :, :] = valid_lr_img[0, :, :, :]
